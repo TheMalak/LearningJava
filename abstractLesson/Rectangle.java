@@ -6,7 +6,7 @@ public class Rectangle extends  GeometryFigure {
     }
 
     @Override
-    void draw() {
-        System.out.println("draw a " + super.figureType);
+    public void draw() {
+        System.out.println("draw a " + super.getClass().getSimpleName());
     }
 }
