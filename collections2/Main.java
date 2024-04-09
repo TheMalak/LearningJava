@@ -1,9 +1,6 @@
 package collections2;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Main {
   public static void main(String[] args) {
@@ -18,6 +15,19 @@ public class Main {
     String getElementofList = element.get(0);
     System.out.println(getElementofList);
     print(element);
+
+      HashMap<String, String> mapOfStrings = new HashMap<>();
+      mapOfStrings.put("1", "one");
+      mapOfStrings.put("2", "two");
+      //cuando regresa el valor o la llave lo vuelve una coleccion.
+      print(mapOfStrings.values());
+      System.out.println("-------------------------");
+      removeElementFromMap(mapOfStrings, "1");
+      print(mapOfStrings.values());
+  }
+
+  public static void removeElementFromMap(Map<String, String> c, String v) {
+      c.remove(v);
   }
 
   public static void print(Collection<String> c) {
